@@ -33,10 +33,6 @@ function HeaderSite($titulo) {
     </ul>
 </nav>
 </header>
-
-<footer>
-    <p>©Copyright &copy; 2024 - Loja de Japonesas</p>
-</footer>
 <body>';
 
 }

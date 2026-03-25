@@ -20,5 +20,9 @@ for ($i = 0; $i < 10; $i++) {
 }
 ?>
 
+<footer>
+    <p>©Copyright &copy; 2024 - Loja de Japonesas</p>
+</footer>
+
 </body>
 </html>
