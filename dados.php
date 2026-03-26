@@ -46,11 +46,11 @@ $colecaoProdutos = array(
     global $colecaoProdutos;
     echo '<div class="products">';
     foreach ($colecaoProdutos as $key => $value) {
-        echo '<div>';
+        echo '<div> <a href="produto.php?id=' . $key . '">';
         echo '<img src="'. $value['img'] . '" alt="' . $value['nome'] . '">';
         echo '<h3>' . $value['nome'] . '</h3>';
         echo '<h3><strong>R$ ' . $value['preco'] . '</strong></h3>';
-        echo '</div>';
+        echo '</a></div>';
     }
     echo '</div>';
    }
