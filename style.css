@@ -6,34 +6,98 @@
 
 body {
     font-family: Arial, sans-serif;
-    padding: 16px;
+    padding: 20px;
     background: #f7f7f7;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Produtos */
+.products {
+    display: flex;
     justify-content: center;
     gap: 12px;
+    width: 100%;
+    max-width: 1200px;
 }
 
-body > div img {
+.products > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: clamp(180px, 30%, 220px);
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.products > div:hover {
+    transform: translateY(-5px);
+}
+
+.products > div img {
     width: 100%;
-    max-width: 180px;
+    max-width: 160px;
     height: auto;
     border-radius: 4px;
+    margin-bottom: 10px;
 }
 
-body > div h3 {
-    margin: 8px 0;
+.products > div h3 {
+    margin: 5px 0;
     font-size: 16px;
+    color: #333;
+}
+
+.products > div h3 strong {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+    margin: 10px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #666;
 }
 
 @media (max-width: 700px) {
     body {
-        justify-content: center;
+        padding: 10px;
+        gap: 15px;
     }
 
-    body > div {
-        width: calc(100% - 24px);
-        margin: 8px;
+    .products {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .products > div {
+        width: calc(50% - 16px);
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.2em;
     }
 }
 

@@ -11,10 +11,12 @@ EscreverTela('<h1>Bem-vindo à loja de japonesas!</h1>');
 $total = SomarValores(10, 20);
 EscreverTela('<h2>Total: R$ ' . $total . '</h2>');
 
+exibirProdutos();
+
 for ($i = 0; $i < 10; $i++) {
 ?>
 <div>
-    <img src="img/amendoim.webp" alt="Amendoim">
+    <img src="/Aula_01hg/img/amendoim.webp" alt="Amendoim">
     <h3>Amendoim japonês Dori 90g</h3>
     <h3><strong>R$ 2,90</strong></h3>
 </div>
