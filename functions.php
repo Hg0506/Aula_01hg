@@ -13,8 +13,8 @@ function SomarValores($valor1, $valor2) {
 // $total = SomarValores(10, 20);
 // EscreverTela($total);
 
-function HeaderSite($titulo) {
-   echo
+function HeaderSite($titulo, $menu) {
+   $header =
    '<!DOCTYPE html>
     <html lang="PT-BR">
     <head>
@@ -25,16 +25,22 @@ function HeaderSite($titulo) {
 </head>
 <header>
 <nav>
-    <ul>
-        <li><a href="teste2.php">Home</a></li>
-        <li><a href="produtos.php">Produtos</a></li>
-        <li><a href="contato.php">Contato</a></li>
-        <li><a href="sobre.php">Sobre</a></li>
-    </ul>
+    <ul>';
+    // Gerar os itens do menu dinamicamente
+        foreach ($menu as $key => $value) {
+          $header .= '  <li><a href="' . $key . '.php">' . $value . '</a></li>';
+        }
+        $header .='</ul>
 </nav>
 </header>
 <body>';
+// Imprime o header do site
+echo $header;
+
+function FooterSite() {
+    $footer = '<footer>
+    <p>©Copyright &copy; 2024 - Loja de Japonesas</p>
+</footer>';
+    echo $footer;
 
 }
-
-?>
