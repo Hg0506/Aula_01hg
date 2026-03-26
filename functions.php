@@ -44,3 +44,4 @@ function FooterSite() {
     echo $footer;
 
 }
+}
